@@ -14,5 +14,6 @@ ENDCLASS.
 CLASS zcl_abaponcloud_hw IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
     out->write( 'Hello World from ABAP on Cloud' ).
+    out->write( 'ABAP Git Demo' ).
   ENDMETHOD.
 ENDCLASS.
