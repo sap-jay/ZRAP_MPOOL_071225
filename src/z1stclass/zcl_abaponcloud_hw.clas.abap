@@ -1,18 +1,13 @@
-CLASS zcl_abaponcloud_hw DEFINITION
-  PUBLIC
-  FINAL
-  CREATE PUBLIC .
+class ZCL_ABAPONCLOUD_HW definition
+  public
+  create private .
 
-  PUBLIC SECTION.
-  interfacES  if_oo_adt_classrun.
-  PROTECTED SECTION.
-  PRIVATE SECTION.
+public section.
+protected section.
+private section.
 ENDCLASS.
 
 
 
-CLASS zcl_abaponcloud_hw IMPLEMENTATION.
-  METHOD if_oo_adt_classrun~main.
-    out->write( 'Hello World from ABAP on Cloud' ).
-  ENDMETHOD.
+CLASS ZCL_ABAPONCLOUD_HW IMPLEMENTATION.
 ENDCLASS.
