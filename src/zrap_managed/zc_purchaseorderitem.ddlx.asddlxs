@@ -1,0 +1,37 @@
+@Metadata.layer:  #CORE
+annotate entity ZC_PurchaseOrderItem
+    with 
+{
+
+  @UI.lineItem: [{
+    position: 10,
+    importance: #HIGH,
+    label: 'Purchase Order'
+   }]
+   Ebeln;
+     @UI.lineItem: [{
+    position: 20,
+    importance: #HIGH,
+    label: 'Purchase Item'
+   }]
+   Ebelp;
+     @UI.lineItem: [{
+    position: 30,
+    importance: #HIGH,
+    label: 'Purchase Order'
+   }]
+   Matnr;
+     @UI.lineItem: [{
+    position: 40,
+    importance: #HIGH,
+    label: 'Material'
+   }]
+   Txz01;
+     @UI.lineItem: [{
+    position: 50,
+    importance: #HIGH,
+    label: 'Plant'
+   }]
+   Werks;
+    
+}

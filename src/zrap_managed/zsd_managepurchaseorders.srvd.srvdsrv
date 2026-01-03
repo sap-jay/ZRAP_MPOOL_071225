@@ -1,0 +1,5 @@
+@EndUserText.label: 'Manage Purchase Orders'
+define service ZSD_ManagePurchaseOrders {
+  expose ZC_PurchaseOrderHeader;
+  expose ZC_PurchaseOrderItem;
+}

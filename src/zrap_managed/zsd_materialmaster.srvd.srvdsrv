@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition For Material Master'
+define service ZSD_MaterialMaster {
+  expose ZC_MaterialMaster;
+}

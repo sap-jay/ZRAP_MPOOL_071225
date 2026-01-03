@@ -1,0 +1,57 @@
+managed implementation in class zbp_r_purchaseorderheader unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_PurchaseOrderHeader alias _header
+persistent table yekko
+draft table yeekodrft
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly : update ) Ebeln;
+  association _item { create; }
+
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for yekko
+    {
+      Ebeln         = ebeln;
+      CreatedAt     = created_at;
+      CreatedBy     = created_by;
+      LastChangedAt = last_changed_at;
+      LastChangedBy = last_changed_by;
+    }
+
+
+}
+
+define behavior for ZR_PurchaseOrderItem alias _item
+persistent table yekpo
+draft table yekpofraft
+etag dependent by _header
+lock dependent by _header
+authorization dependent by _header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Ebeln, Ebelp;
+
+  mapping for yekpo
+    {
+      Ebeln   = ebeln;
+      Ebelp   = ebelp;
+    }
+
+  association _header;
+}

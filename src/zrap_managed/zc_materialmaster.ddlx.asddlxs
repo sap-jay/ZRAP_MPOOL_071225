@@ -1,0 +1,50 @@
+@Metadata.layer : #CORE
+
+
+@UI: {  headerInfo: {
+            typeName: 'Material Master Data',
+            typeNamePlural: 'Materials',
+            title: {
+                type: #STANDARD,
+                label: 'Material',
+                value: 'Matnr'
+            }
+        }
+}
+annotate entity ZC_MaterialMaster with
+{
+
+  @UI : {  lineItem: [{ position: 10, label: 'Material Number' }],
+           selectionField: [{ position: 10 }] }
+
+  Matnr;
+  @UI.lineItem: [{ position: 20, label: 'Material Type' }]
+  Mtart;
+  @UI.lineItem: [{ position: 30, label: 'Industry' }]
+  Mbrsh;
+  @UI.lineItem: [{ position: 40, label: 'Matrail Group' }]
+  Matkl;
+  @UI.lineItem: [{ position: 50, label: 'Unit Of Measure' }]
+  Meins;
+  @UI.lineItem: [{ position: 60, label: 'OLD Matnr' }]
+  Bismt;
+  @UI.lineItem: [{ position: 70, label: 'EAN/UPC' }]
+  Eannr;
+  @UI.hidden: true
+  Brgew;
+  @UI.hidden: true
+  Gewei;
+  @UI.hidden: true
+  Volum;
+  @UI.hidden: true
+  Voleh;
+  @UI.hidden: true
+  Ersda;
+  @UI.hidden: true
+  Ernam;
+  @UI.hidden: true
+  Laeda;
+  @UI.hidden: true
+  Lvorm;
+
+}

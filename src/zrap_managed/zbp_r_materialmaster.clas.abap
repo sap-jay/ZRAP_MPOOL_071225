@@ -1,0 +1,5 @@
+CLASS zbp_r_materialmaster DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zr_materialmaster.
+ENDCLASS.
+
+CLASS zbp_r_materialmaster IMPLEMENTATION.
+ENDCLASS.

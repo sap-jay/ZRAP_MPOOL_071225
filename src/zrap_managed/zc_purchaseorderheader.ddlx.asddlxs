@@ -1,0 +1,134 @@
+@Metadata.layer : #CORE
+
+@UI: {
+headerInfo: {
+    typeName: 'Purchase Order',
+    typeNamePlural: 'Purchase Orders',
+    typeImageUrl: 'sap-icon://credit-card',
+    title: {
+        type: #STANDARD,
+        label: 'Purchase Order',
+        iconUrl: 'sap-icon://credit-card',
+        value: 'Ebeln'
+    },
+    description: {
+        type: #STANDARD,
+        label: 'Company Code',
+        value: 'Bukrs'
+    }
+}
+
+}
+annotate entity ZC_PurchaseOrderHeader with
+{
+
+
+  @UI.facet: [{
+    id: 'poHeader',
+    purpose: #STANDARD,
+    type:  #IDENTIFICATION_REFERENCE,
+    label: 'PO Header Data',
+    position : 10
+     },
+     {
+    id: 'poItem',
+    type:  #LINEITEM_REFERENCE,
+    label: 'PO LineItem Data',
+    position : 20,
+    targetElement: '_item'
+     }]
+
+
+  @UI.lineItem: [{
+    position: 10,
+    importance: #HIGH,
+    label: 'Purchase Order'
+   }]
+
+  @UI.identification: [{
+    position: 10,
+    label: 'Purchase Order'
+  }]
+
+  @UI.selectionField: [{
+  position: 10 }]
+  Ebeln;
+
+  @UI.lineItem: [{
+    position: 20,
+    importance: #HIGH,
+    label: 'Document Category'
+   }]
+
+  @UI.identification: [{
+    position: 20,
+    label: 'Document Category'
+  }]
+  Bstyp;
+
+  @UI.lineItem: [{
+    position: 30,
+    importance: #HIGH,
+    label: 'Document Type'
+   }]
+
+  @UI.identification: [{
+    position: 30,
+    label: 'Document Type'
+  }]
+  Bsart;
+
+  @UI.lineItem: [{
+    position: 40,
+    importance: #HIGH,
+    label: 'Purchase Org'
+   }]
+
+  @UI.identification: [{
+    position: 40,
+    label: 'Purchase Org'
+  }]
+  Ekorg;
+
+  @UI.lineItem: [{
+    position: 50,
+    importance: #HIGH,
+    label: 'Purchase Group'
+   }]
+
+  @UI.identification: [{
+    position: 50,
+    label: 'Purchase Group'
+  }]
+  Ekgrp;
+
+  @UI.lineItem: [{
+    position: 60,
+    importance: #HIGH,
+    label: 'Company Code'
+   }]
+
+  @UI.identification: [{
+    position: 70,
+    label: 'Company Code'
+  }]
+
+  @UI.selectionField: [{
+position: 20 }]
+  Bukrs;
+
+  @UI.lineItem: [{
+    position: 80,
+    importance: #HIGH,
+    label: 'Vendor'
+   }]
+
+  @UI.identification: [{
+    position: 80,
+    label: 'Vendor'
+  }]
+  Lifnr;
+
+
+
+}
